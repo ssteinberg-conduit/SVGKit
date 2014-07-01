@@ -1258,6 +1258,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				DSTROOT = /tmp/SVGKit_iOS.dst;
 				DYLIB_CURRENT_VERSION = 1.2.0;
+				GCC_FAST_MATH = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XCodeProjectData/SVGKit-iOS/SVGKit-iOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
@@ -1278,17 +1279,23 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				DSTROOT = /tmp/SVGKit_iOS.dst;
 				DYLIB_CURRENT_VERSION = 1.2.0;
+				GCC_FAST_MATH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XCodeProjectData/SVGKit-iOS/SVGKit-iOS-Prefix.pch";
+				GCC_UNROLL_LOOPS = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Source/Core\"",
 				);
+				LLVM_LTO = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME).${DYLIB_CURRENT_VERSION}";
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = all;
 			};
 			name = Release;
 		};
