@@ -286,8 +286,8 @@ static NSMutableDictionary* globalSVGKImageCache;
 			self = nil;
 		}
 		
-		[self addObserver:self forKeyPath:@"DOMTree.viewport" options:NSKeyValueObservingOptionOld context:nil];
-		//		[self.DOMTree addObserver:self forKeyPath:@"viewport" options:NSKeyValueObservingOptionOld context:nil];
+//		[self addObserver:self forKeyPath:@"DOMTree.viewport" options:NSKeyValueObservingOptionOld context:nil];
+//		[self.DOMTree addObserver:self forKeyPath:@"viewport" options:NSKeyValueObservingOptionOld context:nil];
 	}
     return self;
 }
@@ -330,6 +330,12 @@ static NSMutableDictionary* globalSVGKImageCache;
 #endif
 	
 //SOMETIMES CRASHES IN APPLE CODE, CAN'T WORK OUT WHY:	[self removeObserver:self forKeyPath:@"DOMTree.viewport"];
+//    @try{
+//        [self.DOMTree removeObserver:self forKeyPath:@"viewport" context:nil];
+//    }@catch(id anException){
+//        //do nothing, obviously it wasn't attached because an exception was thrown
+//        NSLog(@"could not remove observer because DomTree.viewport has not been added?");
+//    }
 	
     self.source = nil;
     self.parseErrorsAndWarnings = nil;
